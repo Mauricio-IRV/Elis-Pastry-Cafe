@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eli's Pastry Cafe</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+
+    <script src="inline-console-master/inline-console.min.js"></script>
+
+</head>
+<body id="scrollbar"> <!-- Only this .html page has overflow hidden for the body -->
+    <header class="nav"> <!--Navigation Bar-->
+        <div class="toggle-nav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <div>
+            <a href="index.html" alt="Eli's Pastry Cafe"><img src="imageContent/logo.png" class="logo" alt="Eli's Pastry Cafe"></a>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <!-- <li><a href="#">Contact</a></li> -->
+                <li><a href="about.html">About</a></li>
+                <li><a href="location.html">Location</a></li>
+            </ul>
+        </nav>
+        
+        <div class="icons">
+            <ul>
+                <li><a target="_blank" href="https://www.instagram.com/elispastrycafe" class="fa fa-instagram"></a></li>
+                <li><a target="_blank" href="https://twitter.com/elispastrycafe" class="fa fa-twitter"></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/elispastrycafe" class="fa fa-facebook"></a></li>
+                <li><a href=# class="fa fa-shopping-bag cart-button"></a></li>
+                <!-- <li><a id="login-button" href=#>Login</a></li> -->
+            </ul>
+        </div>
+<!-- ----------------------------------------------------------- checkout cart overlay ----------------------------------------------------------- -->
+        <div class="cart-overlay" style="visibility: hidden;">
+            <div class="cart">
+                <div class="cart-header">
+                    <h2><i class="fa fa-close close-cart"></i> Your Cart </h2>
+                </div>
+                <div class="cart-content">
+                    <!-- <div class="cart-item">
+                        <div style="padding: 12px 0px 36px 0px;">
+                            <h2 style="padding-top: 0px;"> Ah! It looks like your cart is empty!</h2>
+                        </div>
+                    </div> -->
+                    <!-- <div class="cart-item">
+                        <img src="googlePhotos/IMG_1935.jpg" alt="Product">
+                        <div>
+                            <h4>Item Name</h4>
+                            <h5>Price Tag</h5>
+                            <span class="remove-item">Remove</span>
+                        </div>
+                        <div>
+                            <i class="fa fa-chevron-up"></i>
+                            <p class="cart-item-amount"> 1 </p>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="cart-footer">
+                    <div id="cart-checkout">Checkout<span id="checkout-sum"></span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!-- ----------------------------------------------------------- checkout cart overlay end----------------------------------------------------------- -->
+
+    <div class="content no-background-image"> <!-- Everything passed the navbar -->
+        <div style="margin-top: 0px;" class="title-bar">Order Now!</div>
+        
+        <div id="menu-search-bar">
+            <input id="search-filter" placeholder="Search Menu Items" onkeyup="filter()">
+        </div>
+
+        <div id="menu-content">
+            <!-- <span id="${productData.Token}" class="menu-item">${productData["Item Name"]}</span> -->
+        </div>
+
+        <div id="menu-overlay">
+            <!-- <div class="item-display">
+                <div>
+                <h2><i class="fa fa-window-close-o close-item-display"></i></h2>
+                </div>
+            
+                <div class="item-details" item-id=${product.Token}>
+                    <p><h1>${product["Item Name"]}</h1></p>
+                    <p>Variation Name: ${product["Variation Name"]}</p>
+                    <p>Description: ${product.Description}</p>
+                    <p>Price: $ ${product.Price}</p>
+                </div>
+            
+                <div class="display-footer">
+                    <div class="item-button">
+                        <i class="fa fa-chevron-left"></i>
+                        <span class="item-amount"> 1 </span>
+                        <i class="fa fa-chevron-right"></i>
+                    </div>
+                    <div class="add-to-cart" class="item-button">
+                        <span>Add To Cart</span>
+                    </div>
+                </div>
+              </div> -->
+        </div>
+
+        <div id="checkout-window">
+            <div>
+                <h2 id="close-checkout"><i class="fa fa-window-close-o close-checkout-display"></i></h2>
+                <div>
+                    <p><h1>Dear Customer,</h1></p>
+                    <p>We are currently not accepting online orders on our portal!
+                    We apologize for any inconvenience this may cause but
+                    you can still find us on Doordash &/or Grubhub!</p>
+                    <br><p style="font-style: italic;">ElisPastryCafe</p>
+                </div>
+            </div>
+        </div>
+                
+        <footer class="footer">
+            <div class="footer-columns">
+                <ul>
+                    <li>
+                        <img img src="imageContent/logo.png" class="footer-logo" alt="Eli's Pastry Cafe">
+                    </li>
+
+                    <li style="font-style: italic; color: #ffff">
+                        Eli's Pastry Cafe
+                    </li>
+                </ul>
+
+                <ul>
+                    <li style="border-bottom: 2px solid #ffff; padding-bottom: 7px; margin-bottom: 7px;">Overview:</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <!-- <li><a href="#">Contact</a></li> -->
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="location.html">Location</a></li>
+                </ul>
+
+                <ul>
+                    <li style="border-bottom: 2px solid #ffff; padding-bottom: 7px; margin-bottom: 7px;">Contact Us:</li>
+                    <li>+1 (401) 702-7467</li>
+                    <li>support@elispastrycafe.com</li>
+                </ul>
+
+                <ul>
+                    <li style="border-bottom: 2px solid #ffff; padding-bottom: 7px; margin-bottom: 7px;">Follow Us:</li>
+                    <li><a target="_blank" href="https://www.instagram.com/elispastrycafe" class="fa fa-instagram"></a></li>
+                    <li><a target="_blank" href="https://twitter.com/elispastrycafe" class="fa fa-twitter"></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/elispastrycafe" class="fa fa-facebook"></a></li>
+                </ul>
+
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

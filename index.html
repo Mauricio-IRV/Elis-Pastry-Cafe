@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eli's Pastry Cafe</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-package/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-package/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-package/favicon-16x16.png">
+    <link rel="manifest" href="/favicon-package/site.webmanifest">
+    <link rel="mask-icon" href="/favicon-package/safari-pinned-tab.svg" color="#949494">
+    <link rel="shortcut icon" href="/favicon-package/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-config" content="/favicon-package/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body id="scrollbar">
+    <header class="nav"> <!--Navigation Bar-->
+        <div class="toggle-nav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <div>
+            <a href="index.html"><img src="imageContent/logo.png" class="logo" alt="Eli's Pastry Cafe"></a>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <!-- <li><a href="#">Contact</a></li> -->
+                <li><a href="about.html">About</a></li>
+                <li><a href="location.html">Location</a></li>
+            </ul>
+        </nav>
+        
+        <div class="icons">
+            <ul>
+                <li><a target="_blank" href="https://www.instagram.com/elispastrycafe" class="fa fa-instagram"></a></li>
+                <li><a target="_blank" href="https://twitter.com/elispastrycafe" class="fa fa-twitter"></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/elispastrycafe" class="fa fa-facebook"></a></li>
+                <li><a href=# class="fa fa-shopping-bag cart-button"></a></li>
+                <!-- <li><a id="login-button" href=#>Login</a></li> -->
+            </ul>
+        </div>
+
+        <div class="cart-overlay" style="visibility: hidden;">
+            <div class="cart">
+                <div class="cart-header">
+                    <h2><i class="fa fa-close close-cart"></i> Your Cart </h2>
+                </div>
+                <div class="cart-content">
+                    <!-- <div class="cart-item">
+                        <div style="padding: 12px 0px 36px 0px;">
+                            <h2 style="padding-top: 0px;"> Ah! It looks like your cart is empty!</h2>
+                        </div>
+                    </div> -->
+                    <!-- <div class="cart-item">
+                        <img src="googlePhotos/IMG_1935.jpg" alt="Product">
+                        <div>
+                            <h4>Item Name</h4>
+                            <h5>Price Tag</h5>
+                            <span class="remove-item">Remove</span>
+                        </div>
+                        <div>
+                            <i class="fa fa-chevron-up"></i>
+                            <p class="cart-item-amount"> 1 </p>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="cart-footer">
+                    <div id="cart-checkout">Checkout<span id="checkout-sum"></span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content"> <!--Everything passed the navbar-->
+
+        <div class="content-wrapper">
+            <main id="home-background" class="background-image"> <!--coffee image. quote? "Drink Coffee! Do stupid things faster and with more energy!" ~Darynda Jones-->
+                <br><h3 class= "quote">~Stop by for a coffee today!</h3>
+            </main>
+
+            <div class="title-bar">Eli's Pastry Cafe</div>
+
+            <div class="showcase">
+                <span id="left-arrow">&#10094</span>
+
+                <img style="margin-left: -20px;" class="showcaseContent" src="cakeContent/First.webp">
+                <img class="showcaseContent" src="cakeContent/Second.webp">
+                <img loading="lazy" class="showcaseContent" src="cakeContent/Third.webp">
+
+                <span id="right-arrow">&#10095</span>
+
+                <img loading="lazy" class="showcaseContent" src="cakeContent/Fourth.webp">
+                <img loading="lazy" class="showcaseContent" src="cakeContent/Fifth.webp">
+                <img loading="lazy" class="showcaseContent" src="cakeContent/Sixth.webp">
+                <img loading="lazy" class="showcaseContent" src="cakeContent/Seventh.webp">
+                <img loading="lazy" class="showcaseContent" src="cakeContent/Eighth.webp">
+                <img loading="lazy" class="showcaseContent" src="cakeContent/Ninth.webp">
+                <img loading="lazy" class="showcaseContent" src="cakeContent/Tenth.webp">
+            </div>
+
+            <div class="title-bar"><span id="order-link" onclick="smoothScroll(preOrderForm)">Pre-Order Now!</span></div>
+
+            <div id="pre-order-content">
+                <div class="preorder-block">
+                    <div class="preorder-image i"><img src="googlePhotos/tres-leches.jpg"></div>
+                    <a class="preorder-button i" onclick="displayForm(2)">Pre-Order Now!</a>
+                </div>
+                <div class="preorder-block">
+                    <a class="preorder-button iv" onclick="displayForm(1)">Pre-Order Now!</a>
+                    <div class="preorder-image ii"><img src="googlePhotos/quesadilla.jpg"></div>
+                </div>
+            </div>
+
+            <!-- <div id="order-content">
+                <a href="" class="preorder-button ii">Pre-Order Now!</a>
+                <div class="preorder-image ii"><img loading="lazy" src="cakeContent/Second.jpg"></div>
+            </div>
+            <div id="order-content">
+                <div class="preorder-image iii"><img loading="lazy" src="cakeContent/Tenth.jpg"></div>
+                <a href="" class="preorder-button iii">Pre-Order Now!</a>
+            </div> -->
+
+
+            <div id="food-gallery">
+                <img src="professionalPhotos/cheesecake.jpg">
+                <img src="professionalPhotos/cookies.jpg">
+                <img src="professionalPhotos/tripleTreat.jpg">
+            </div>
+            
+            <section id="smooth"> </section>
+
+            <form id="pre-order-form" method="POST" action="https://formsubmit.co/support@elispastrycafe.com" enctype="multipart/form-data">
+                <input type="hidden" name="_template" value="table">
+                <span class="title-bar">Pre-Order Form</span>
+
+                <div id="general-information">
+                    <div>
+                        <label class="selection-label" for="form-type">Form Type: </label>
+                        <select id="form-type" name="form-type" onchange="displayForm(value)">
+                            <option value="Contact Us" label="Contact Us">Contact Us</option>
+                            <option value="Quesadilla" label="Quesadilla">Quesadilla</option>
+                            <option value="Custom Cake" label="Custom Cake">Custom Cake</option>
+                            <option value="Selection Item" label="Selection Item">Selection Item</option>
+                            <option value="Custom Input" label="Custom Input">Custom Input</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="name">Name: </label>
+                        <input id="name" type="text" name="name">
+                    </div>
+                    <div>
+                        <label for="email">Email: </label>
+                        <input id="email" type="email" name="email">
+                    </div>
+                    <div>
+                        <label for="phone-number">Phone Number: </label>
+                        <input id="phone-number" name="phone-number">
+                    </div>
+                </div>
+
+                <div id="cake-form" hidden>
+                    <div>
+                        <label for="cake-writing">Cake Writing: </label>
+                        <input id="cake-writing" type="text" name="cake-writing">
+                    </div>
+                    <div>
+                        <label class="selection-label" for="cake-type">Cake Type: </label>
+                        <select id="cake-type" name="cake-type">
+                            <option></option>
+                            <option label="Round" value="Round">Round</option>
+                            <!-- <option label="Square" value="Square">Square</option> -->
+                            <option label="Rectangular" value="Rectangular">Rectangular</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="servings">Size/Servings: </label>
+                        <input id="servings" type="text" name="servings">
+                    </div>
+                    <div>
+                        <label for="cake-floor-count">Cake Floor Count: </label>
+                        <input id="cake-floor-count" type="number" name="cake-floor-count" min="1">
+                    </div>
+                    <div>
+                        <label for="cake-flavor">Cake Flavor: </label>
+                        <input id="cake-flavor" type="text" name="cake-flavor">
+                    </div>
+                    <div>
+                        <label for="frosting-type">Frosting Type: </label>
+                        <input id="frosting-type" type="text" name="frosting-type">
+                    </div>
+                    <div>
+                        <label class="selection-label" for="fruit-topping">Fruit Topping: </label>
+                        <input id="fruit-topping" type="checkbox" name="fruit-topping">
+                    </div>
+                    <div>
+                        <label class="selection-label" for="fruit-filling">Fruit Filling: </label>
+                        <input id="fruit-filling" type="checkbox" name="fruit-filling">
+                    </div>
+                    <!-- <div>
+                        <label for="special-instructions">Special Instructions: </label>
+                        <input id="special-instructions" type="text" name="special-instructions">
+                    </div> -->
+                </div>
+                
+                <div id="quesadilla-form" hidden>
+                    <div>
+                        <label class="selection-label" for="quesadilla-size">Quesadilla Size: </label>
+                        <select id="quesadilla-size" name="quesadilla-size">
+                            <option></option>
+                            <option label="Quarter Sheet (13x9)" value="Quarter Sheet (13x9)">Quarter Sheet (13x9)</option>
+                            <option label="Half Sheet (18x13)" value="Half Sheet (18x13)">Half Sheet (18x13)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="selection-label" for="sesame-seeds">Sesame Seeds: </label>
+                        <select id="sesame-seeds" name="sesame-seeds">
+                            <option></option>
+                            <option label="Include Sesame Seeds" value="Include Sesame Seeds">Include Sesame Seeds</option>
+                            <option label="Exclude Sesame Seeds" value="Exclude Sesame Seeds">Exclude Sesame Seeds</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div id=selection-form hidden>
+                    <div>
+                        <label class="selection-label" for="selection-item">Selection Item: </label>
+                        <select id="selection-item" name="selection-item">
+                            <option></option>
+                            <option label="Pound Cake" value="Pound Cake">Pound Cake</option>
+                            <option label="Cheesecake" value="Cheesecake">Cheesecake</option>
+                            <option label="Cookies" value="Cookies">Cookies</option>
+                            <option label="Flan" value="Flan">Flan</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="item-type">Type: </label>
+                        <input id="item-type" type="text" name="item-type">
+                    </div>
+                </div>
+
+                <div id=custom-form hidden>
+                    <div>
+                        <label for="custom-input">Custom Input: </label>
+                        <input id="custom-input" type="text" name="custom-input">
+                    </div>
+                </div>
+                                
+            <!-- <div id="pound-cake-form">
+                    <div>
+                        <label class="selection-label" for="pound-cake-size">Pound Cake Size: </label>
+                            <select id="pound-cake-size" name="pound-cake-size">
+                                <option></option>
+                                <option label="Loaf Pan (13x5)" value="Loaf Pan (13x5)">Loaf Pan (13x5)</option>
+                                <option label="Bundt Pan (7.5x3)" value="Bundt Pan (7.5x3)">Bundt Pan (7.5x3)</option>
+                                <option label="Bundt Pan (7.5x3)" value="Bundt Pan (7.5x3)">Bundt Pan (7.5x3)</option>
+                                <option label="Bundt Pan (7.5x3)" value="Bundt Pan (7.5x3)">Bundt Pan (7.5x3)</option>
+                            </select>
+                    </div>
+                    <div>
+                        <label for="pound-cake-count">Quantity: </label>
+                        <input id="pound-cake-count" type="number" name="pound-cake-count" min="1">
+                    </div>
+                </div> -->
+
+                <div id="conclusive-information" hidden>
+                    <div>
+                        <label for="item-quantity">Quantity: </label>
+                        <input id="item-quantity" type="number" name="item-quantity" min="1">
+                    </div>
+                    <div>
+                        <label for="allergies">Allergies: </label>
+                        <input id="allergies" type="text" name="allergies">
+                    </div>
+                    <div>
+                        <label class="selection-label" for="pickup-date">Pick Up Date: </label>
+                        <input id="pickup-date" type="date" name="pickup-date" placeholder="mm/dd/yyyy">
+                    </div>
+                    <div>
+                        <label class="selection-label" for="pickup-time">Pick Up Time: </label>
+                        <input id="pickup-time" type="time" name="pickup-time">
+                    </div>
+                    <div>
+                        <label class="selection-label" for="image-attachment">Image Attachment: </label>
+                        <input id="image-attachment" type="file" name="image-attachment" accept="image/*">
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="message-body">Message Body: </label>
+                </div>
+                <div>
+                    <textarea id="message-body" name="message-body"></textarea>
+                </div>
+
+                <div id="form-buttons">
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+
+            <div id="checkout-window">
+                <div>
+                    <h2 id="close-checkout"><i class="fa fa-window-close-o close-checkout-display"></i></h2>
+                    <div>
+                        <p><h1>Dear Customer,</h1></p>
+                        <p>We are currently not accepting online orders on our portal!
+                        We apologize for any inconvenience this may cause but
+                        you can still find us on Doordash &/or Grubhub!</p>
+                        <br><p style="font-style: italic;">ElisPastryCafe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-columns">
+                <ul>
+                    <li>
+                        <a href="index.html"><img src="imageContent/logo.png" class="footer-logo" alt="Eli's Pastry Cafe"></a>   
+                    </li>
+
+                    <li id="single-footer-text">
+                        Eli's Pastry Cafe
+                    </li>
+                </ul>
+
+                <ul>
+                    <li style="border-bottom: 2px solid #ffff; padding-bottom: 7px; margin-bottom: 7px;">Overview:</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <!-- <li><a href="#">Contact</a></li> -->
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="location.html">Location</a></li>
+                </ul>
+
+                <ul>
+                    <li style="border-bottom: 2px solid #ffff; padding-bottom: 7px; margin-bottom: 7px;">Contact Us:</li>
+                    <li>+1 (401) 702-7467</li>
+                    <li>support@elispastrycafe.com</li>
+                </ul>
+
+                <ul>
+                    <li style="border-bottom: 2px solid #ffff; padding-bottom: 7px; margin-bottom: 7px;">Follow Us:</li>
+                    <li><a target="_blank" href="https://www.instagram.com/elispastrycafe" class="fa fa-instagram"></a></li>
+                    <li><a target="_blank" href="https://twitter.com/elispastrycafe" class="fa fa-twitter"></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/elispastrycafe" class="fa fa-facebook"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

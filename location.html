@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eli's Pastry Cafe</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body id="scrollbar">
+    <header class="nav"> <!--Navigation Bar-->
+        <div class= "toggle-nav">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <div>
+            <a href="index.html" alt="Eli's Pastry Cafe"><img src="imageContent/logo.png" class="logo" alt="Eli's Pastry Cafe"></a>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <!-- <li><a href="#">Contact</a></li> -->
+                <li><a href="about.html">About</a></li>
+                <li><a href="location.html">Location</a></li>
+            </ul>
+        </nav>
+        
+        <div class="icons">
+            <ul>
+                <li><a target="_blank" href="https://www.instagram.com/elispastrycafe" class="fa fa-instagram"></a></li>
+                <li><a target="_blank" href="https://twitter.com/elispastrycafe" class="fa fa-twitter"></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/elispastrycafe" class="fa fa-facebook"></a></li>
+                <li><a href=# class="fa fa-shopping-bag cart-button"></a></li>
+                <!-- <li><a id="login-button" href=#>Login</a></li> -->
+            </ul>
+        </div>
+
+        <div class="cart-overlay" style="visibility: hidden;">
+            <div class="cart">
+                <div class="cart-header">
+                    <h2><i class="fa fa-close close-cart"></i> Your Cart </h2>
+                </div>
+                <div class="cart-content">
+                    <!-- <div class="cart-item">
+                        <div style="padding: 12px 0px 36px 0px;">
+                            <h2 style="padding-top: 0px;"> Ah! It looks like your cart is empty!</h2>
+                        </div>
+                    </div> -->
+                    <!-- <div class="cart-item">
+                        <img src="googlePhotos/IMG_1935.jpg" alt="Product">
+                        <div>
+                            <h4>Item Name</h4>
+                            <h5>Price Tag</h5>
+                            <span class="remove-item">Remove</span>
+                        </div>
+                        <div>
+                            <i class="fa fa-chevron-up"></i>
+                            <p class="cart-item-amount"> 1 </p>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="cart-footer">
+                    <div id="cart-checkout">Checkout<span id="checkout-sum"></span></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content"> <!--Everything passed the navbar-->
+        <div class="content-wrapper">
+            <main id="location-background" class="background-image">
+                <br><h3 class= "quote">~Eli's Pastry Café</h3>
+            </main>
+
+            <div class="flex-block">
+                <div class="box" id="map">
+                    <script async
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIQz3YBh-UEzvC_BM-NklO5GZIyel9JiM&callback=initMap">
+                    </script>
+                </div>
+
+                <div class="box hours">
+                    <table class="table-hours">
+                        <tr class="header-text">
+                            <td colspan="2">Hours of Operation:</td>
+                        </tr>
+
+                        <tr>
+                            <td>Mon & Wed</td>
+                            <td>8am-3pm</td>
+                        </tr>
+                        <tr>
+                            <td>Tues</td>
+                            <td>2pm-6pm</td>
+                        </tr>
+                        <tr>
+                            <td>Thurs</td>
+                            <td>8am-6pm</td>
+                        </tr>
+                        <tr>
+                            <td>Fri & Sat</td>
+                            <td>8am-4pm</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sunday</td>
+                            <td>Closed</td>
+                        </tr>
+
+                        <tr class="header-text">
+                            <td>Location:</td>
+                            <td>Contact Us:</td>
+                        </tr>
+
+                        <tr>
+                            <td> 124 County St. 
+                            <br> New Bedford, 
+                            <br> Ma 02744</td>
+                            
+                            <td class="location-icons"><a href="https://www.instagram.com/elispastrycafe" class="fa fa-instagram"></a> 
+                            <a href="https://twitter.com/elispastrycafe" class="fa fa-twitter"></a> 
+                            <a href="https://www.facebook.com/elispastrycafe" class="fa fa-facebook"></a> 
+                            <br> +1 (401) 702-7467 
+                            <br> support@elispastry&shy;cafe.com</td>
+                        </tr>
+
+
+                        <!-- <p>Monday - Friday <span style="float: right; padding-right: 30px;"> 6 am - 4 pm </span></p><br>
+                        <p>Saturday - Sunday <span style="float: right; padding-right: 30px;"> 6 am - 5 pm </span></p><br> -->
+
+                    </table>
+                </div>
+            </div>
+
+            <div id="checkout-window">
+                <div>
+                    <h2 id="close-checkout"><i class="fa fa-window-close-o close-checkout-display"></i></h2>
+                    <div>
+                        <p><h1>Dear Customer,</h1></p>
+                        <p>We are currently not accepting online orders on our portal!
+                        We apologize for any inconvenience this may cause but
+                        you can still find us on Doordash &/or Grubhub!</p>
+                        <br><p style="font-style: italic;">ElisPastryCafe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-columns">
+                <ul>
+                    <li>
+                        <img img src="imageContent/logo.png" class="footer-logo" alt="Eli's Pastry Cafe">
+                    </li>
+
+                    <li style="font-style: italic; color: #ffff">
+                        Eli's Pastry Cafe
+                    </li>
+                </ul>
+
+                <ul>
+                    <li style="border-bottom: 2px solid #ffff; padding-bottom: 7px; margin-bottom: 7px;">Overview:</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <!-- <li><a href="#">Contact</a></li> -->
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="location.html">Location</a></li>
+                </ul>
+
+                <ul>
+                    <li style="border-bottom: 2px solid #ffff; padding-bottom: 7px; margin-bottom: 7px;">Contact Us:</li>
+                    <li>+1 (401) 702-7467</li>
+                    <li>support@elispastrycafe.com</li>
+                </ul>
+
+                <ul>
+                    <li style="border-bottom: 2px solid #ffff; padding-bottom: 7px; margin-bottom: 7px;">Follow Us:</li>
+                    <li><a target="_blank" href="https://www.instagram.com/elispastrycafe" class="fa fa-instagram"></a></li>
+                    <li><a target="_blank" href="https://twitter.com/elispastrycafe" class="fa fa-twitter"></a></li>
+                    <li><a target="_blank" href="https://www.facebook.com/elispastrycafe" class="fa fa-facebook"></a></li>
+                </ul>
+
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
